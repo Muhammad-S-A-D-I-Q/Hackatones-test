@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search-Filter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="./slider.css">
+  </head>
+  <body>
+    <!-- cart Screen -->
+    <div class="cart" id="cart">
+
+      <div class="cart-head">
+        <h3 class="closeBtn" onclick="closeBtn()">x</h3>
+        <center><h1>my Cart</h1></center>
+      </div>
+
+      <div class="cart-body" id="cart-body">
+        <center>your cart is empty...</center>
+      </div>
+
+      <div class="cart-footer">
+       <center>Total Price: <span id="cartTotal">0</span> PKR</center>
+       <center><button class="btn" onclick="clearCart()">clear cart</button></center>
+    </div>
+
+    </div>
+
+    <!-- Navbar -->
+    <div class="header">
+      <a href="#" class="logo">gadeg<span>Groove</span></a>
+      <div class="tabs " id="tabs">
+        <a href="#home" onclick="setActiveTab(this); toggleMenu()">Home</a>
+        <a href="#about" onclick="setActiveTab(this);toggleMenu()">About</a>
+        <a href="#gallery" onclick="setActiveTab(this); toggleMenu()">Gallery</a>
+        <a href="#contact" onclick="setActiveTab(this); toggleMenu()">Contact</a>
+        <a href="#" onclick="setActiveTab(this); toggleMenu()"><span> Signup</span> </a>
+       
+      </div>
+      <i class="fas fa-bars menuIcon" onclick="toggleMenu()"></i>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="navbar">
+      <div class="logo">SearchFilter</div>
+      <div>
+   
+      </div>
+      <input
+        type="text"
+        class="search-input"
+        placeholder="Search..."
+        oninput="handleSearch(this.value)"
+      />
+      <b class="cartIcon" onclick="toggleCart()">cart <span id="cartLength"> 0</span></b>
+    </div>
+    <div class="product-section" id="productSection"></div>
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- slider -->
+
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="https://graphicsfamily.com/wp-content/uploads/edd/2022/12/E-commerce-Facebook-Cover-Design-Template-1180x664.jpg" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="https://assets.materialup.com/uploads/9a0ca30e-2889-4523-9f2f-a31ab8565ee3/preview.jpg" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="">3 / 3</div>
+    <img src="https://img.freepik.com/free-vector/flat-design-shopping-center-facebook-cover_23-2149337410.jpg" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+  
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+<!-- Footer -->
+<footer class="bg-light text-center ">
+  <!-- Grid container -->
+  <div class="container p-4">
+
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+
+      <!-- Google -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i class="fab fa-google"></i></a>
+
+      <!-- Instagram -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+      <!-- Github -->
+      <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!" role="button"><i class="fab fa-github"></i></a>
+    </section>
+    <!-- Section: Social media -->
+
+
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up </strong>
+            </p>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input type="email" id="form5Example2" class="form-control" />
+              <label class="form-label" for="form5Example2">Email address</label>
+            </div>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-auto">
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary mb-4">
+              Subscribe
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+        distinctio earum repellat quaerat voluptatibus placeat nam,
+        commodi optio pariatur est quia magnam eum harum corrupti dicta,
+        aliquam sequi voluptate quas.
+      </p>
+    </section>
+    <!-- Section: Text -->
+
+
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">About charity</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda doloribus quis libero reiciendis dolore error tempora pariatur nesciunt, ullam doloremque consequuntur sequi, officia ut illo veritatis facilis eligendi, saepe facere.</p>
+            </li>
+            <li>
+              <a href="#!" class="text-dark"></a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark"></a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark"></a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">QUick link</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-dark">GALLERY </a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark"> TERMS OF USE </a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark"> LEGAL DISCLAIMER </a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">PRIVACY POLICY </a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">about us</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-dark" >Facebook</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">whatsup</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">Instagram</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">MEta</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">contact us</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#kk" class="text-dark">FORM</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">Email</a>
+            </li>
+            <li>
+              <a href="#!" class="text-dark">number</a>
+            </li>
+            <li>
+              <a href="#map" class="text-dark">map</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    © 2020 Copyright:
+    <a class="text-dark" href="https://mdbootstrap.com/">enjoy</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/3fd8073822.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="nav.js"></script>
+   <script src="slider.js"></script>
+
+ 
+  </body>
+</html>

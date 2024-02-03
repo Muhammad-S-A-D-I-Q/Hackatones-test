@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple registration form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="./form.css">
+  </head>
+  <body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <!-- Include Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Registration Form</title>
+      <!-- Include Font Awesome for icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+    <body>
+    
+    <div class="main-block">
+      <h1>Registration</h1>
+      <form action="/">
+        <hr>
+        <div class="account-type">
+          <input type="radio" value="none" id="radioOne" name="account" checked/>
+          <label for="radioOne" class="radio">Personal</label>
+          <input type="radio" value="none" id="radioTwo" name="account" />
+          <label for="radioTwo" class="radio">Company</label>
+        </div>
+        <hr>
+        <label for="email"><i class="fas fa-envelope"></i></label>
+        <input type="text" name="email" id="email" placeholder="Email">
+        <label for="fname"><i class="fas fa-user"></i></label>
+        <input type="text" name="fname" id="fname" placeholder="Name">
+        <label for="password"><i class="fas fa-unlock-alt"></i></label>
+        <input type="password" name="password" id="password" placeholder="Password" >
+        <hr>
+        <div class="gender">
+          <input type="radio" value="none" id="male" name="gender" checked/>
+          <label for="male" class="radio">Male</label>
+          <input type="radio" value="none" id="female" name="gender" />
+          <label for="female" class="radio">Female</label>
+        </div>
+        <hr>
+        <div class="btn-block">
+          <p>By clicking Register, you agree on our <a href="">Privacy Policy for gadegGrove</a>.</p>
+          <button type="button" id="myButton" onclick="sub()">Submit</button>
+        </div>
+      </form>
+    </div>
+    
+    <script>
+    function sub() {
+      var email = document.getElementById("email");
+      var fname = document.getElementById("fname");
+      var password = document.getElementById("password");
+    
+      if (email.value === "") {
+        alert("Enter your email!");
+      } else if (fname.value === "") {
+        alert("Enter your name!");
+      } else if (password.value === "") {
+        alert("Enter your password!");
+      } else {
+        console.log(email.value);
+        console.log(fname.value);
+        console.log(password.value);
+    
+        // Navigate to the relative path './relativePage.html'
+        window.location.href = './website.html';
+      }
+    }
+    </script>
+    
+    </body>
+    </html>
+    
+
+</body>
+</html>
+
+
+  </body>
+</html>
